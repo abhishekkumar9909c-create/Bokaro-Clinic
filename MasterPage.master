@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title><%: Page.Title %> Bokaro Clinic</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/Styles/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header class="site-header">
+            <div class="header-top" style="background-color: #057062">
+                <div class="container">
+                    <div class="logo-section">
+                        <img src="Images/logo.svg" alt="Bokaro Clinic Logo" class="logo" />
+                        <div class="clinic-info">
+                            <h1>BOKARO CLINIC</h1>
+                            <p class="tagline">Your Health, Our Priority</p>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="icon">📍</span>
+                            <span>Bokaro, Jharkhand</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">📞</span>
+                            <span>7992499909</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="background-color: #055e52">
+                <nav class="main-nav">
+                    <div class="container">
+                        <ul class="nav-menu">
+                            <li><a href="Default.aspx">Home</a></li>
+                            <li><a href="About.aspx">About Us</a></li>
+                            <li><a href="Services.aspx">Services</a></li>
+                            <li><a href="OurDoctors.aspx">Our Doctors</a></li>
+                            <li><a href="Appointments.aspx">Appointments</a></li>
+                            <li><a href="Contact.aspx">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main class="main-content" style="padding-left: 50px; padding-right: 50px; width: 1200px; margin:auto">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Bokaro Clinic</h3>
+                        <p>Providing quality healthcare services to the community of Bokaro and surrounding areas.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="Default.aspx">Home</a></li>
+                            <li><a href="Services.aspx">Services</a></li>
+                            <li><a href="Appointments.aspx">Book Appointment</a></li>
+                            <li><a href="Contact.aspx">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Information</h3>
+                        <p><strong>Location:</strong> Bokaro, Jharkhand</p>
+                        <p><strong>Phone:</strong> 7992499909</p>
+                        <p><strong>Email:</strong> abhishekkumar9909c.com</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Working Hours</h3>
+                        <p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
+                        <p>Sunday: 10:00 AM - 2:00 PM</p>
+                        <p>Emergency: 24/7</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; <%: DateTime.Now.Year %> Bokaro Clinic. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
